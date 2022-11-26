@@ -1,24 +1,13 @@
 body {
     margin: 0;
+    padding: 0;
 }
-.pink {
-    height: 200px;
-    background-color: pink;
-
+.header {
+    text-align: center;
+    background-color: azure;
+    border-bottom: 2px solid grey;
+    padding-top: 20px;
 }
-.pink > * {
-    align-items: center
-    
-}
-button {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-#box {
-    height: 150px;
-    width: 150px;
-    background-color: pink;
-    margin-left: 50px;
-    margin-top: 20px;
-
+h1 {
+    margin-top: 0;
 }
