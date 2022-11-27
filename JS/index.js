@@ -40,3 +40,46 @@ function myFunction(value){
 }
 document.getElementById('carBrands').innerHTML=text1;
 
+//Here I'll test myself
+//Create new array, add 2 items and then remove the last one.
+const myList=['cars', 'hiking', 'trucks', 'country'];
+myList.push('nature', 'lakes');
+ document.getElementById("myList").innerHTML=myList;
+ //now let's remove the last 2 items
+ const myList1=['cars', 'hiking', 'trucks', 'country'];
+myList1.push('nature', 'lakes');
+myList1.pop();
+myList1.pop();
+ document.getElementById("myList1").innerHTML=myList1;
+ //job is done, could be better but I did it.
+
+ //drawing 100 circles, I write the code from mdn and I try to understand it
+ const btn=document.querySelector('button');
+ const canvas=document.querySelector('canvas');
+ const ctx=canvas.getContext('2d', { alpha: false });
+
+ document.addEventListener('DOMContentLoaded', () => {
+    canvas.width=
+        document.documentElement.clientWidth;
+    convas.height=
+        document.documentElement.clientHeight;
+})
+    function random(number){
+        return
+            Math.floor(Math.random()*number);
+    }
+
+function draw(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < 100; i++) {
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(255,0,0,0.5)';
+        ctx.arc(random(canvas.width),
+    random(canvas.height), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+    }
+}
+
+btn.addEventListener('click', draw);
+
+
