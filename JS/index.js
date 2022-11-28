@@ -53,33 +53,107 @@ myList1.pop();
  document.getElementById("myList1").innerHTML=myList1;
  //job is done, could be better but I did it.
 
- //drawing 100 circles, I write the code from mdn and I try to understand it
- const btn=document.querySelector('button');
- const canvas=document.querySelector('canvas');
- const ctx=canvas.getContext('2d', { alpha: false });
+ var myName = "Valentin"; //global
+ let secondName = "Bombonel"; //local
+ const age = 22; //constant
 
- document.addEventListener('DOMContentLoaded', () => {
-    canvas.width=
-        document.documentElement.clientWidth;
-    convas.height=
-        document.documentElement.clientHeight;
-})
-    function random(number){
-        return
-            Math.floor(Math.random()*number);
-    }
+ //primitive
+ let boolean = false;
+ console.log(typeof(boolean));
 
-function draw(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(canvas.width),
-    random(canvas.height), random(50), 0, 2 * Math.PI);
-    ctx.fill();
-    }
+ let n = null;
+ console.log(typeof(n));
+
+ let undf = undefined;
+ console.log(typeof(undf));
+
+ let num = 123;
+ console.log(typeof(num));
+
+ let str = "This is a string";
+ console.log(typeof(str));
+
+ //objects
+let persone1 = {
+    age: 20,
+    name: "Bombo"    
 }
+console.log(persone1);
 
-btn.addEventListener('click', draw);
+//arrays
+
+const hobbies = ["Motorsports", "Hiking", "Swimming"]
+console.log(hobbies);
+
+const prices = [12, 11, 13];
+console.log(prices);
+
+//operators
+
+// +, -, /, *, 
+//++, -- adds or removes 1
+
+// and - &&, or - ||, not - !
+
+// == != === !== <= >= < > -will result booleans(true/false)
+
+console.log(length.hobbies === length.prices); //3=3
+
+//atributions = += /= *= -= -I can specify the increment number
+
+let num1 = 20;
+num1 *= 2; //40
+console.log(num1);
+
+//flow control
+// if/else
+const age1 = [18]; 
+
+if(age1 < 18){
+    console.log("You are under aged.")
+} else {
+    console.log("Welcome.")
+};
+
+//for loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
