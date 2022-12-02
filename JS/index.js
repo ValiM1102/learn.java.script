@@ -117,6 +117,36 @@ if(age1 < 18){
 
 //for loop
 
+const humans = ['Vali', 'Deni', 'Bombo'];
+
+for(i=0; i<humans.length; i++){
+    console.log(humans[i]);
+};
+for(i=humans.length - 1; i>=0; i--){
+    console.log(humans[i]);
+};
+
+//while loop
+
+let number=1;
+while(number <10){
+    console.log(number);
+    number++;
+};
+
+//do while loop
+
+do {
+
+}while();
+
+//switch
+
+switch(){
+
+};
+
+
 
 
 
