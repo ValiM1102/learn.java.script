@@ -134,19 +134,7 @@ while(number <10){
     number++;
 };
 
-//do while loop
-
-do {
-
-}while();
-
-//switch
-
-switch(){
-
-};
-
-
+//dark mode test
 
 
 
