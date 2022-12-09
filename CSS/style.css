@@ -11,3 +11,25 @@ body {
 h1 {
     margin-top: 0;
 }
+
+.container1 {
+    margin: 10px;
+    padding: 0;
+    border: 5px solid rgb(246, 213, 251);
+    background-color:thistle;
+}
+.container1 h1 {
+    text-align: center;
+    color: rgb(255, 215, 162);
+}
+.container1 ul{
+    padding: 0;
+}
+.list-items{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    background-color: bisque;
+    border-radius: 5px;
+    
+}
