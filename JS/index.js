@@ -174,38 +174,73 @@
 
 //Creating element
 
-const ul = document.querySelector('ul');
-const li = document.createElement('li');
+// const ul = document.querySelector('ul');
+// const li = document.createElement('li');
 
-//adding elements
+// //adding elements
 
-ul.append(li);
+// ul.append(li);
 
-//Modifying the text
+// //Modifying the text
 
-li.innerText = 'Mustang';
+// li.innerText = 'Mustang';
 
 
-//Modifying attributes and classes
+// //Modifying attributes and classes
 
-li.setAttribute('class', 'list-items');
+// li.setAttribute('class', 'list-items');
 
-//remove elements
+// //remove elements
 
-li.remove();
+// li.remove();
 
 ///////////////////////////////////////////////////////
 
 
+//traversing the dom
+
+//let ul = document.querySelector('ul');
+
+// console.log(ul.parentNode.parentNode);
+// console.log(ul.parentElement.parentElement);
+
+// const html = document.documentElement;
+// console.log(html.parentNode);
+// console.log(html.parentElement);
+
+
+// child node traversal
+
+// console.log(ul.childNodes);
+
+// console.log(ul.firstChild);
+
+// console.log(ul.lastChild);
+
+
+// ul.childNodes[1].style.backgroundColor = 'blue';
 
 
 
+// let ul = document.querySelector('ul');
+
+// console.log(ul.children);
+// console.log(ul.firstElementChild)
+// console.log(ul.lastElementChild)
+
+//sibling nodes h1 and ul, same level for example
+
+// let ul = document.querySelector('ul');
+
+// console.log(ul.previousSibling)
+// console.log(ul.nextSibling)
+
+//for elements just add element
 
 
+///////////////////////////////////////////////
 
-
-
-
+//EVENT LISTNERS///////////////////////////////
 
 
 
