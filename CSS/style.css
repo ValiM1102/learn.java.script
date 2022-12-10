@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.header {
+/* .header {
     text-align: center;
     background-color: azure;
     border-bottom: 2px solid grey;
@@ -45,7 +45,7 @@ h1 {
     justify-content: center;
     margin: 0px;
     padding: 5px;
-    background-color: cadetblue;
+   
     font-size: 0.5rem;
 }    
 .boxes{
@@ -59,4 +59,42 @@ button {
     font-weight: 600;
     border-radius: 5px;
     
+} */
+
+.container {
+    border: 2px solid salmon;
+    margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
 }
+
+.boxes {
+    background-color: white;
+    border: 2px solid seagreen;
+    font-style: italic;
+    color:teal;
+    font-weight: 900;
+    font-size: x-large;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hidden-content {
+    display: none;
+}
+.hidden-content.reveal-btn {
+    display: block;
+}
+
+
+
+
+
+
+
+
