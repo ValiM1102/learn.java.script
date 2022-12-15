@@ -265,54 +265,85 @@
 
 //reveal event
 
-const revealBtn = document.querySelector('.reveal-btn');
+// const revealBtn = document.querySelector('.reveal-btn');
 
-const hiddenContent = document.querySelector('.hidden-content');
+// const hiddenContent = document.querySelector('.hidden-content');
 
-function revealContent(){
-    if(hiddenContent.classList.contains('reveal-btn')
-    ) {
-        hiddenContent.classList.remove('reveal-btn')
-    }   else {
-        hiddenContent.classList.add('reveal-btn')
-    }
+// function revealContent(){
+//     if(hiddenContent.classList.contains('reveal-btn')
+//     ) {
+//         hiddenContent.classList.remove('reveal-btn')
+//     }   else {
+//         hiddenContent.classList.add('reveal-btn')
+//     }
+// }
+
+// revealBtn.addEventListener('click', revealContent);
+
+
+// // the end for now
+
+// const repeatString = ['hey'];
+// for (i=0; i<3; i++){
+   
+// };
+
+//ROCK PAPER SCISSORS
+
+//getCompuerChoice = randomly return 'rock', 'paper' or 'scissors'
+
+let getComputerChoise = Math.floor(Math.random() * 3);
+let computerChoise = "";
+
+switch(getComputerChoise){
+    case 0: 
+        computerChoise = "rock";
+    break;
+
+    case 1:
+        computerChoise = "paper";
+    break;
+
+    case 2:
+        computerChoise = "scissors";
+    break;
 }
 
-revealBtn.addEventListener('click', revealContent);
+let myChoice = "";
 
+let myPaper = document.getElementById("paper");
+myPaper.addEventListener("click", function(e){
+    myChoice = "paper";
+    return("paper");
+});
 
-// the end for now
+let myRock = document.getElementById("rock");
+myPaper.addEventListener("click", function(e){
+    myChoice = "rock";
+    return("rock");
+});
 
+let myScissors = document.getElementById("scissors");
+myPaper.addEventListener("click", function(e){
+    myChoice = "scissors";
+    return("scissors");
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if(computerChoise == myChoice){
+    alert("DRAW")
+}else if( computerChoise == "rock", myChoice == "paper"){
+    alert("YOU WIN")
+}else if( computerChoise == "rock", myChoice == "scissors"){
+    alert("YOU LOSE")
+}else if( computerChoise == "paper", myChoice == "rock"){
+    alert("YOU LOSE")
+}else if( computerChoise == "paper", myChoice == "scissors"){
+    alert("YOU WIN")
+}else if( computerChoise == "scissors", myChoice == "rock"){
+    alert("YOU WIN")
+}else if( computerChoise == "scissors", myChoice == "paper"){
+    alert("YOU LOSE")
+};
 
 
 
