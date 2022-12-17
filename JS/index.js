@@ -292,58 +292,97 @@
 
 //getCompuerChoice = randomly return 'rock', 'paper' or 'scissors'
 
-let getComputerChoise = Math.floor(Math.random() * 3);
-let computerChoise = "";
+// let getComputerChoise = Math.floor(Math.random() * 3);
+// let computerChoise = "";
 
-switch(getComputerChoise){
-    case 0: 
-        computerChoise = "rock";
-    break;
+// switch(getComputerChoise){
+//     case 0: 
+//         computerChoise = "rock";
+//     break;
 
-    case 1:
-        computerChoise = "paper";
-    break;
+//     case 1:
+//         computerChoise = "paper";
+//     break;
 
-    case 2:
-        computerChoise = "scissors";
-    break;
+//     case 2:
+//         computerChoise = "scissors";
+//     break;
+// }
+
+// let myChoice = "";
+
+// let myPaper = document.getElementById("paper");
+// myPaper.addEventListener("click", function(e){
+//     myChoice = "paper";
+//     return("paper");
+// });
+
+// let myRock = document.getElementById("rock");
+// myPaper.addEventListener("click", function(e){
+//     myChoice = "rock";
+//     return("rock");
+// });
+
+// let myScissors = document.getElementById("scissors");
+// myPaper.addEventListener("click", function(e){
+//     myChoice = "scissors";
+//     return("scissors");
+// });
+
+// if(computerChoise == myChoice){
+//     alert("DRAW")
+// }else if( computerChoise == "rock", myChoice == "paper"){
+//     alert("YOU WIN")
+// }else if( computerChoise == "rock", myChoice == "scissors"){
+//     alert("YOU LOSE")
+// }else if( computerChoise == "paper", myChoice == "rock"){
+//     alert("YOU LOSE")
+// }else if( computerChoise == "paper", myChoice == "scissors"){
+//     alert("YOU WIN")
+// }else if( computerChoise == "scissors", myChoice == "rock"){
+//     alert("YOU WIN")
+// }else if( computerChoise == "scissors", myChoice == "paper"){
+//     alert("YOU LOSE")
+// };
+
+////////////////////////////
+// MAKING A CUSTOM FUNCTION THAT WILL DISPLAY A MESSAGE BOX 
+
+const body = document.body;
+
+function displayMessage(msgText, msgType){
+    const panel = 
+        document.createElement('div');
+        panel.setAttribute('class', 'msgBox');
+        body.appendChild(panel);
+
+    const msg = 
+        document.createElement('p');
+        msg.textContent = msgText;
+        panel.appendChild(msg);
+
+    const closeBtn =
+        document.createElement('button');
+        closeBtn.textContent = 'x';
+        panel.appendChild(closeBtn);
+
+        closeBtn.addEventListener('click', () => 
+        panel.parentNode.removeChild(panel));
+
+    if (msgType === 'warning') {
+        msg.style.backgroundImage = 'url(../icons/warning.png)';
+        panel.style.backgroundColor = 'red';
+    } else if (msgType === 'chat') {
+        msg.style.backgroundImage = 'url(../icons/chat.png)'
+        panel.style.backgroundColor = 'green';
+    } else {
+        msg.style.paddingLeft = '20px';
+    }   
 }
 
-let myChoice = "";
-
-let myPaper = document.getElementById("paper");
-myPaper.addEventListener("click", function(e){
-    myChoice = "paper";
-    return("paper");
-});
-
-let myRock = document.getElementById("rock");
-myPaper.addEventListener("click", function(e){
-    myChoice = "rock";
-    return("rock");
-});
-
-let myScissors = document.getElementById("scissors");
-myPaper.addEventListener("click", function(e){
-    myChoice = "scissors";
-    return("scissors");
-});
-
-if(computerChoise == myChoice){
-    alert("DRAW")
-}else if( computerChoise == "rock", myChoice == "paper"){
-    alert("YOU WIN")
-}else if( computerChoise == "rock", myChoice == "scissors"){
-    alert("YOU LOSE")
-}else if( computerChoise == "paper", myChoice == "rock"){
-    alert("YOU LOSE")
-}else if( computerChoise == "paper", myChoice == "scissors"){
-    alert("YOU WIN")
-}else if( computerChoise == "scissors", myChoice == "rock"){
-    alert("YOU WIN")
-}else if( computerChoise == "scissors", myChoice == "paper"){
-    alert("YOU LOSE")
-};
-
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => displayMessage
+('Vali: Need help?', 'chat'));
+// ('WARNING! NO MEMORY LEFT', 'warning'));
 
 
