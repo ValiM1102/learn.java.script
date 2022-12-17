@@ -348,41 +348,75 @@
 ////////////////////////////
 // MAKING A CUSTOM FUNCTION THAT WILL DISPLAY A MESSAGE BOX 
 
-const body = document.body;
+// const body = document.body;
 
-function displayMessage(msgText, msgType){
-    const panel = 
-        document.createElement('div');
-        panel.setAttribute('class', 'msgBox');
-        body.appendChild(panel);
+// function displayMessage(msgText, msgType){
+//     const panel = 
+//         document.createElement('div');
+//         panel.setAttribute('class', 'msgBox');
+//         body.appendChild(panel);
 
-    const msg = 
-        document.createElement('p');
-        msg.textContent = msgText;
-        panel.appendChild(msg);
+//     const msg = 
+//         document.createElement('p');
+//         msg.textContent = msgText;
+//         panel.appendChild(msg);
 
-    const closeBtn =
-        document.createElement('button');
-        closeBtn.textContent = 'x';
-        panel.appendChild(closeBtn);
+//     const closeBtn =
+//         document.createElement('button');
+//         closeBtn.textContent = 'x';
+//         panel.appendChild(closeBtn);
 
-        closeBtn.addEventListener('click', () => 
-        panel.parentNode.removeChild(panel));
+//         closeBtn.addEventListener('click', () => 
+//         panel.parentNode.removeChild(panel));
 
-    if (msgType === 'warning') {
-        msg.style.backgroundImage = 'url(../icons/warning.png)';
-        panel.style.backgroundColor = 'red';
-    } else if (msgType === 'chat') {
-        msg.style.backgroundImage = 'url(../icons/chat.png)'
-        panel.style.backgroundColor = 'green';
-    } else {
-        msg.style.paddingLeft = '20px';
-    }   
-}
+//     if (msgType === 'warning') {
+//         msg.style.backgroundImage = 'url(../icons/warning.png)';
+//         panel.style.backgroundColor = 'red';
+//     } else if (msgType === 'chat') {
+//         msg.style.backgroundImage = 'url(../icons/chat.png)'
+//         panel.style.backgroundColor = 'green';
+//     } else {
+//         msg.style.paddingLeft = '20px';
+//     }   
+// }
 
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => displayMessage
-('Vali: Need help?', 'chat'));
+// const btn = document.querySelector('button');
+// btn.addEventListener('click', () => displayMessage
+// ('Vali: Need help?', 'chat'));
 // ('WARNING! NO MEMORY LEFT', 'warning'));
 
+/////////////////////////
+//make a return function MDN
 
+const input = document.querySelector('.numberInput');
+const para = document.querySelector('p');
+
+function squared(num){
+    return num * num;
+}
+
+function cubed(num){
+    return num * num * num;
+}
+
+function factorial(num) {
+    if (num < 0) return undefined;
+    if (num === 0) return 1;
+    let x = num - 1;
+    while(x > 1) {
+        num *= x;
+        x--;
+    }
+    return num
+}
+
+input.addEventListener("change", ()=>{
+    const num = parseFloat(input.value);
+    if (isNaN(num)) {
+        para.textContent = "Youu need to enter a number you idiot!";
+    }else {
+        para.textContent = `${num} squared is ${squared(num)}. `;
+        para.textContent += `${num} cubed is ${cubed(num)}. `;
+        para.textContent += `${num} factorial is ${factorial(num)}. `;
+    }
+});

@@ -92,7 +92,7 @@ button {
 } */
 
 /* MAKING A CUSTOM FUNCTION, THIS IS THE CSS PART */
-
+/* 
 .msgBox {
     position: absolute;
     top: 50%;
@@ -119,8 +119,11 @@ button {
     right: 0;
     font-size: 1.1rem;
     color: #aaa;
+  } */
+/* 
+RETURN FUNCTION */
+input {
+    font-size: 2em;
+    margin: 10px 1px 0;
   }
-
-
-
 
