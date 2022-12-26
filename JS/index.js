@@ -388,35 +388,118 @@
 /////////////////////////
 //make a return function MDN
 
-const input = document.querySelector('.numberInput');
-const para = document.querySelector('p');
+// const input = document.querySelector('.numberInput');
+// const para = document.querySelector('p');
 
-function squared(num){
-    return num * num;
-}
+// function squared(num){
+//     return num * num;
+// }
 
-function cubed(num){
-    return num * num * num;
-}
+// function cubed(num){
+//     return num * num * num;
+// }
 
-function factorial(num) {
-    if (num < 0) return undefined;
-    if (num === 0) return 1;
-    let x = num - 1;
-    while(x > 1) {
-        num *= x;
-        x--;
-    }
-    return num
-}
+// function factorial(num) {
+//     if (num < 0) return undefined;
+//     if (num === 0) return 1;
+//     let x = num - 1;
+//     while(x > 1) {
+//         num *= x;
+//         x--;
+//     }
+//     return num
+// }
 
-input.addEventListener("change", ()=>{
-    const num = parseFloat(input.value);
-    if (isNaN(num)) {
-        para.textContent = "Youu need to enter a number you idiot!";
-    }else {
-        para.textContent = `${num} squared is ${squared(num)}. `;
-        para.textContent += `${num} cubed is ${cubed(num)}. `;
-        para.textContent += `${num} factorial is ${factorial(num)}. `;
-    }
-});
+// input.addEventListener("change", ()=>{
+//     const num = parseFloat(input.value);
+//     if (isNaN(num)) {
+//         para.textContent = "Youu need to enter a number you idiot!";
+//     }else {
+//         para.textContent = `${num} squared is ${squared(num)}. `;
+//         para.textContent += `${num} cubed is ${cubed(num)}. `;
+//         para.textContent += `${num} factorial is ${factorial(num)}. `;
+//     }
+// });
+
+// TOP PROJECT
+ //a function that adds 7 to my number
+
+//  function add7(num){
+//     console.log(num + 7)
+//  }
+
+//  //multiply numbers function
+
+// function multiply(num, num1){
+//     console.log(num * num1)
+// }
+
+// //capitalize
+
+// function capitalize(word){
+//     const firstLetter = word.charAt(0);
+//     const upperCaseFL = firstLetter.toUpperCase();
+//     const upperCase = word.toUpperCase();
+//     console.log(upperCase, upperCaseFL)
+// }
+
+// function lastLetter(word){
+//     const lastLetter = word.slice(-1);
+//     console.log(lastLetter)
+// }
+// lastLetter('abcd')
+
+/////////////////
+//rock paper scissors from console
+
+// const random = Math.floor(Math.random()*3)
+
+// function getCompuerChoice(){
+//     if(random == 0){
+//         return 'rock'
+//     } else if (random == 1){
+//         return 'paper'
+//     }else{
+//         return "scissors"
+//     }
+// }
+
+// // const player = myChoise;
+// const computer = getCompuerChoice;
+
+// function checkWinner(){
+//     if(player == computer){
+//         return "Draw!";
+//     }
+//     else if(computer == "ROCK"){
+//         return (player == "PAPER") ? "You Win!" : "You Lose!";
+//     }
+//     else if(computer == "PAPER"){
+//         return (player == "SCISSORS") ? "You Win!" : "You Lose!";
+//     }
+//     else if(computer == "SCISSORS"){
+//         return (player == "ROCK") ? "You Win!" : "You Lose!";
+//     }
+// }
+// const player = 'rock';
+// const winner = checkWinner;
+// console.log(winner)
+
+// const cars = [
+//     "BMW",
+//     "Volvo",
+//     "Opel",
+//     "peugeot",
+//     "Audi",
+//     "Ford"
+// ]
+// let carsLength = cars.length
+
+// let text = "<ul>";
+// for (let i = 0; i < carsLength; i++){
+//     text += "<li>" + cars[i] + "</li>";
+// }
+// text += "</ul>"
+// document.getElementById("demo").innerHTML = cars[cars.length - 1];
+
+
