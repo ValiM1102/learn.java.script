@@ -66,27 +66,30 @@
 
 // random numbers function
 
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min)
+function randomCards(){
+    let randomNum = Math.floor( Math.random()*13 ) + 1;
+    if(randomNum > 10){
+      return randomNum = 10
+    } else if(randomNum === 1){
+      return randomNum = 11
+    } else {
+      return randomNum
+    }
 }  
+/////player details
 
-// here are all the cards
-let firstCard = getRandomIntInclusive(1, 11)
-let secondCard = getRandomIntInclusive(1, 11)
+let player = {
+  name: "Vali",
+  chips: 100
+}
+let playerEL = document.querySelector(".player-el")
+playerEL.textContent = player.name + ": $" + player.chips
 
-
-// let randomIndex = getRandomIntInclusive(0, 1);
-
-let allCards = [firstCard, secondCard]
-let sum = allCards[0] + allCards[1]
-
-
-
-
+/////
+let allCards = []
+let sum = 0
 let hasBlackjack = false
-let isAlive = true
+let isAlive = false
 let message
 let cards = document.querySelector("#cards-el")
 let score = document.querySelector("#score-el")
@@ -94,10 +97,16 @@ let messageEl = document.querySelector("#message-el")
 
 // these functions start and render the game when play and draw is pressed
 function startGame (){
+  isAlive = true
+  let firstCard = randomCards();
+  let secondCard = randomCards();
+  allCards = [firstCard, secondCard]
+  sum = allCards[0] + allCards[1]
   renderGame()
 }
 
 function renderGame(){
+ 
   cards.textContent = "Cards: ";
   for (let i = 0; i < allCards.length; i++){
     cards.textContent += allCards[i] + " "
@@ -114,7 +123,7 @@ function renderGame(){
   isAlive = false
 }
   messageEl.textContent = message;
-  
+  return allCards;
 }
 
 // draw new card function
@@ -122,14 +131,16 @@ function renderGame(){
 
 
 function newCard(){
-  let card = getRandomIntInclusive(1, 11); 
+  if(isAlive === true && hasBlackjack === false){
+  let card = randomCards();
+  sum += card;
   allCards.push(card)
-  sum += allCards[2];
   renderGame();
-}
+}}
 
-function getRandomCard(){
-  return 5
-}
-let random = getRandomCard()
-console.log(random)
+////
+
+let countries = ["Romania", "Poland", "Germany", "USA", "Bulgaria"]
+countries.pop()
+
+console.log(countries)
