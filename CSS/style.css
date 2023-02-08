@@ -60,15 +60,16 @@ body{
     display: grid;
     grid-gap: 0.2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr;
     grid-template-areas: 
     "in in"
-    "btn1 btn2";
-    width: 300px;
-    height: 5rem;
+    "btn1 btn2"
+    "ul ul";
+    width: 100%;
+    box-sizing: border-box;
     padding: 5px;
     border-radius: 10px;
-    padding-bottom: 0;
+    padding-bottom: 90px;
     padding-top: 10px;
     background-color: rgba(250, 235, 215, 0.189);
 }
@@ -79,7 +80,8 @@ input{
     font-weight: 900;
     border: none;
     border-radius: 5px;
-    padding-left: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
 button{
@@ -87,7 +89,7 @@ button{
     font-weight: 800;
     color: white;
     background-color:firebrick;
-
+    padding: 10px 20px;
 }
 
 #input-btn{
@@ -98,7 +100,9 @@ button{
     grid-area: btn2;
 }
 
-
+#ul-el{
+    grid-area: ul;
+}
 
 /* chrome extension */
 
